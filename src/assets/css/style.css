@@ -973,4 +973,13 @@ section.footer {
 
 .custom-image img {
   border-radius: 5px;
+  object-fit: scale-down;
+}
+
+.sub-content img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  object-fit: scale-down;
 }
