@@ -1,6 +1,7 @@
+import {useEffect} from 'react'
+import { init } from 'ityped';
 import homepage_Desktop from "../assets/images/sc2.jpg"
 import homepage_Desktop1 from "../assets/images/Sc1.jpg"
-
 import group3 from "../assets/images/Blue-3.png"
 import group1 from "../assets/images/Blue-1.png"
 import group2 from "../assets/images/Blue-2.png"
@@ -8,7 +9,44 @@ import rightPerson from "../assets/images/Always-pay-the-right-person.webp"
 import tipsDesktop from "../assets/images/Tips_and_Trips_Desktop_UI_Comp_03.webp"
 
 
-const whoWeAre = ()=>{
+const WhoWeAre = ()=>{
+   useEffect(()=>{
+   
+            init('.typed',{
+              strings: ["anyone", "anytime", "anywhere"],
+              // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+              stringsElement: null,
+              // typing speed
+              typeSpeed: 50,
+              // time before typing starts
+              startDelay: 1200,
+              // backspacing speed
+              backSpeed: 20,
+              // time before backspacing
+              backDelay: 500,
+              // loop
+              loop: true,
+              // false = infinite
+              loopCount: '100',
+              // show cursor
+              showCursor: false,
+              // character for cursor
+              cursorChar: "|",
+              // attribute to type (null == text)
+              attr: null,
+              // either html or text
+              contentType: 'html',
+              // call when done callback function
+              callback: function () { },
+              // starting callback function before each string
+              preStringTyped: function () { },
+              //callback for every typed string
+              onStringTyped: function () { },
+              // callback for reset
+              resetCallback: function () { }
+            });
+          
+  },[])
     return(<div>
         <div id="demo" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
@@ -123,4 +161,4 @@ const whoWeAre = ()=>{
         </div>
       </div>
 )}
-export default whoWeAre
+export default WhoWeAre
